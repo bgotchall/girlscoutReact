@@ -1,4 +1,4 @@
-# Girl scout troop
+# React based Girl scout troop website
 A blogging/sharing site for a girl scout troop.  Done with React, materialize, Mysql, node, Oauth.
 
 Example of a terrible site with some basic functions:
