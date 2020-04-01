@@ -40,7 +40,7 @@ const Home = () => {
           <Grid container  className={classes.contentContainer} item xs={12}>
             <Grid item xs={12}>
               <Paper className={classes.paper}>
-               {/* <Carousel /> */}
+               <Carousel />
               
               </Paper>
             </Grid>
