@@ -21,7 +21,7 @@ const Home = () => {
       backgroundColor:' rgba(0, 174, 88,50)',
     },
     contentContainer: {
-        margin: '80px',
+        margin: '30px',
 
     },
   }));
@@ -40,7 +40,7 @@ const Home = () => {
           <Grid container  className={classes.contentContainer} item xs={12}>
             <Grid item xs={12}>
               <Paper className={classes.paper}>
-               <Carousel />
+               {/* <Carousel /> */}
               
               </Paper>
             </Grid>
