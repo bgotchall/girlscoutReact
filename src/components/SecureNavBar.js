@@ -51,6 +51,7 @@ const SecureNavBar = () => {
                         <AuthLink name="Signups" route="/signup" ></AuthLink>
                         <AuthLink name="News" route="/news" ></AuthLink>
                         <AuthLink name="Profile" route="/profile" ></AuthLink>
+                        <AuthLink name="Carousel Test" route="/carousel" ></AuthLink>
 
                         {/* {isAuthenticated && <PrivateRoute path="/profile" component={Profile} />} */}
                         
@@ -60,7 +61,7 @@ const SecureNavBar = () => {
                                 <NavDropdown.Item href="/signups">Manage Signups</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.3">Something Else</NavDropdown.Item>
                                 <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                                <NavDropdown.Item href="/carousel">Carousel</NavDropdown.Item>
                             </NavDropdown>
                             
                         )}

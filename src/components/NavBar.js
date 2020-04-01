@@ -55,6 +55,7 @@ const NavBar = () => {
             <AuthLink name="Signups" route="/signup"></AuthLink>
             <AuthLink name="News" route="/news"></AuthLink>
             <AuthLink name="Profile" route="/profile"></AuthLink>
+            <AuthLink name="CarouselTest" route="/carousel"></AuthLink>
 
             {/* {isAuthenticated && <PrivateRoute path="/profile" component={Profile} />} */}
 
@@ -70,8 +71,8 @@ const NavBar = () => {
                   Something Else
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
+                <NavDropdown.Item href="/carousel">
+                  Carousel
                 </NavDropdown.Item>
               </NavDropdown>
             )}

@@ -1,56 +1,36 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import Grid from "@material-ui/core/Grid";
-
+import Button from "@material-ui/core/Button";
+import { useAuth0 } from "../../react-auth0-spa";
 
 const PublicHome = () => {
+  const { loginWithRedirect } = useAuth0();
 
+  const useStyles = makeStyles(theme => ({
+    root: {
+      flexGrow: 1
+    },
+    paper: {
+      padding: theme.spacing(2),
+      textAlign: "center",
+      color: theme.palette.text.secondary
+    }
+  }));
 
-    const useStyles = makeStyles(theme => ({
-        root: {
-          flexGrow: 1,
-        },
-        paper: {
-          padding: theme.spacing(2),
-          textAlign: 'center',
-          color: theme.palette.text.secondary,
-        },
-      }));
-
-      const classes = useStyles();
+  const classes = useStyles();
 
   return (
     <>
-      <h1>
-        Hi welcome to our page. Log in if you want to access the features.
-      </h1>
-      <div  className={classes.root}>
-        <Grid container spacing={3}>
-          <Grid item xs={12}>
-            <Paper className={classes.paper}>xs=12</Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper className={classes.paper}>xs=6</Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper className={classes.paper}>xs=6</Paper>
-          </Grid>
-          <Grid item xs={3}>
-            <Paper className={classes.paper}>xs=3</Paper>
-          </Grid>
-          <Grid item xs={3}>
-            <Paper className={classes.paper}>xs=3</Paper>
-          </Grid>
-          <Grid item xs={3}>
-            <Paper className={classes.paper}>xs=3</Paper>
-          </Grid>
-          <Grid item xs={3}>
-            <Paper className={classes.paper}>xs=3</Paper>
-          </Grid>
-        </Grid>
-      </div>
-      );
+      <h1>Welcome to Central Texas Girl Scouts Troop 1690 Home page.</h1>
+      <h3>Members and parents sign up here:</h3>
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={() => loginWithRedirect({})}
+      >
+        Sign up!
+      </Button>
+      
     </>
   );
 };
@@ -59,45 +39,4 @@ export default PublicHome;
 
 /////
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
-}));
 
-function CenteredGrid() {
-  const classes = useStyles();
-
-  return (
-    <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <Paper className={classes.paper}>xs=12</Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>xs=6</Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>xs=6</Paper>
-        </Grid>
-        <Grid item xs={3}>
-          <Paper className={classes.paper}>xs=3</Paper>
-        </Grid>
-        <Grid item xs={3}>
-          <Paper className={classes.paper}>xs=3</Paper>
-        </Grid>
-        <Grid item xs={3}>
-          <Paper className={classes.paper}>xs=3</Paper>
-        </Grid>
-        <Grid item xs={3}>
-          <Paper className={classes.paper}>xs=3</Paper>
-        </Grid>
-      </Grid>
-    </div>
-  );
-}

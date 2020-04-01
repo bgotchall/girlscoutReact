@@ -23,6 +23,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import Button from '@material-ui/core/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AboveHeader from './components/AboveHeader.js';
+import Carousel from './components/pages/Carousel.js';
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
         {isAuthenticated && <Route exact path="/photos" component={Photos} />}
         {isAuthenticated && <Route exact path="/calendar" component={Calendar} />}
         {isAuthenticated && <Route exact path="/profile" component={Profile} />}
+        {isAuthenticated && <Route exact path="/carousel" component={Carousel} />}
 
 
       </Router>
