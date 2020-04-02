@@ -13,6 +13,7 @@ import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import AuthLink from "../utils/AuthLink";
 import { makeStyles } from "@material-ui/core/styles";
+import Loading from './Loading';
 
 const NavBar = () => {
   const {
@@ -37,6 +38,10 @@ const NavBar = () => {
   }));
 
   const classes = useStyles();
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <>

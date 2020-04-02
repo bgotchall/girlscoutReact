@@ -24,10 +24,14 @@ import Button from '@material-ui/core/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AboveHeader from './components/AboveHeader.js';
 import Carousel from './components/pages/Carousel.js';
-
+import Loading from './components/Loading.js'
 
 function App() {
   const { loading, user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <div className="App">
