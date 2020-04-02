@@ -25,7 +25,9 @@ import Button from '@material-ui/core/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AboveHeader from './components/AboveHeader.js';
 import Carousel from './components/pages/Carousel.js';
-import Loading from './components/Loading.js'
+import Loading from './components/Loading.js';
+import List from './components/List.js';
+import List2 from './components/List2.js';
 
 function App() {
   const { loading, user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
@@ -53,11 +55,14 @@ function App() {
         <Route exact path="/photos" component={Photos} /> */}
         {/* Switch the below line to PublicHome for production */}
         {!isAuthenticated && <Route exact path="/" component={HomeDebug} />}
+        {!isAuthenticated && <Route exact path="/list" component={List} />}
+        {!isAuthenticated && <Route exact path="/list2" component={List2} />}
         {isAuthenticated && <Route exact path="/" component={Home} />}
         {isAuthenticated && <Route exact path="/photos" component={Photos} />}
         {isAuthenticated && <Route exact path="/calendar" component={Calendar} />}
         {isAuthenticated && <Route exact path="/profile" component={Profile} />}
         {isAuthenticated && <Route exact path="/carousel" component={Carousel} />}
+        
 
 
       </Router>

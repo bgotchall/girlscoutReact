@@ -39,3 +39,10 @@ general thoughts and to-dos:
 * then the header intro can be the same.
 * do a calendar zoom page.
 * do a news zoom page.
+
+
+Front end/backend notes:
+This helped me a lot:  https://dev.to/nburgess/creating-a-react-app-with-react-router-and-an-express-backend-33l3
+
+I wasn't sure how react router and express worked together.  Basically the server.js is running the same as it always was, but on a different port (5000 in my case) and react
+is running on 3000.  Then add a proxy statement to the package.json file so that /api/whatever goes to the server.  How does this deploy to heroku?

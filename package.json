@@ -10,9 +10,11 @@
     "@testing-library/react": "^9.4.1",
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.4.1",
+    "express": "^4.17.1",
     "googleapis": "^48.0.0",
     "moment": "^2.24.0",
     "mysql2": "^2.1.0",
+    "path": "^0.12.7",
     "react": "^16.13.0",
     "react-big-calendar": "^0.24.1",
     "react-bootstrap": "^1.0.0-beta.17",
@@ -27,11 +29,14 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start2": "node index.js",
+    "heroku-postbuild": "npm install --only=dev && npm install && npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
+  "proxy": "http://localhost:5000",
   "browserslist": {
     "production": [
       ">0.2%",
