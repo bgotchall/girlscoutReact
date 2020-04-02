@@ -3,12 +3,8 @@ import { useAuth0 } from "../react-auth0-spa";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import moment from "moment";
-import 'react-big-calendar/lib/css/react-big-calendar.css'
 
-import { Calendar, momentLocalizer } from 'react-big-calendar'
-
-function CalendarEmbed() {
+function EventsEmbed() {
   const { isAuthenticated } = useAuth0();
 
   const useStyles = makeStyles(theme => ({
@@ -36,27 +32,40 @@ function CalendarEmbed() {
       backgroundColor: " rgba(0, 174, 88,50)"
     },
     newstext: {
-      textAlign: "left"
+      textAlign:"left",
+
     }
   }));
 
   const classes = useStyles();
-  const localizer = momentLocalizer(moment)
 
   return (
     <>
       <div className={classes.newstext}>
-        <h1>CALENDAR</h1>
-        <Calendar
-          localizer={localizer}
-          style={{ height: "420px" }}
-          events={[]}
-        />
+        <h1>UPCOMING EVENTS</h1>
+        <p>March 1</p>
+        <h5>Troop 1690 camping trip</h5>
+        <p>
+          The girls went camping and had so much fun! Click here to see pictures
+        </p>
+        <hr></hr>
+        <p>March 1</p>
+        <h5>Troop 1690 camping trip</h5>
+        <p>
+          The girls went camping and had so much fun! Click here to see pictures
+        </p>
+        <hr></hr>
+        <p>March 1</p>
+        <h5>Troop 1690 camping trip</h5>
+        <p>
+          The girls went camping and had so much fun! Click here to see pictures
+        </p>
+        
       </div>
     </>
   );
-}
+};
 
-export default CalendarEmbed;
+export default EventsEmbed;
 
 /////

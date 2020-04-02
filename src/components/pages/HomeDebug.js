@@ -8,6 +8,8 @@ import Grid from "@material-ui/core/Grid";
 import Carousel from "./Carousel";
 import News from './../News';
 import CalendarEmbed from './../CalendarEmbed';
+import EventsEmbed from './../EventsEmbed';
+
 
 const Home = () => {
   const { isAuthenticated } = useAuth0();
@@ -76,7 +78,9 @@ const Home = () => {
               </Paper>
             </Grid>
             <Grid item xs={4}>
-              <Paper className={classes.paper}>Upcoming events column</Paper>
+              <Paper className={classes.paper}>
+                <EventsEmbed />
+              </Paper>
             </Grid>
             <Grid item xs={12}>
               <Paper className={classes.paper}>chat function</Paper>

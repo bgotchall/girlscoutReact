@@ -60,7 +60,7 @@ const News = () => {
         <p>
           The girls went camping and had so much fun! Click here to see pictures
         </p>
-        <hr></hr>
+        
       </div>
     </>
   );
