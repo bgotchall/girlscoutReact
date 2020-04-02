@@ -14,6 +14,8 @@ import FormControl from "react-bootstrap/FormControl";
 import AuthLink from "../utils/AuthLink";
 import { makeStyles } from "@material-ui/core/styles";
 import Loading from './Loading';
+import SimpleBackdrop from './SimpleBackdrop.js';
+
 
 const NavBar = () => {
   const {
@@ -39,9 +41,9 @@ const NavBar = () => {
 
   const classes = useStyles();
 
-  // if (loading) {
-  //   return <Loading />;
-  // }
+  if (loading) {
+    return <SimpleBackdrop />;
+  }
 
   return (
     <>
