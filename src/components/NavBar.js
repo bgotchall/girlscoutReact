@@ -30,7 +30,7 @@ const NavBar = () => {
 
   const useStyles = makeStyles(theme => ({
     root: {
-      backgroundColor: "#00ae58" //#00ae58 is the GS green color
+      //backgroundColor: "#00ae58" //#00ae58 is the GS green color
     },
     link: {
       color: 'white',
@@ -39,9 +39,9 @@ const NavBar = () => {
 
   const classes = useStyles();
 
-  if (loading) {
-    return <Loading />;
-  }
+  // if (loading) {
+  //   return <Loading />;
+  // }
 
   return (
     <>

@@ -15,6 +15,11 @@ need:
 
 7) chat feature?  Disquss again?  would be a damn copout
 8) cookie sales feature.  maybe just a mockup.
+9) wait spinner is ugly.  I think MUI has one.
 
 
 Auth0 notes:  The wait for loading thing works.  The spinner may need to spin for 60s.  It seems that something can get out of state if you rush it.  THen once things are out of sync you just have to watch the spinner for a minute.  Then it comes back and works, at least for a while.
+
+
+Calendar notes:
+maybe: http://jquense.github.io/react-big-calendar/examples/index.html

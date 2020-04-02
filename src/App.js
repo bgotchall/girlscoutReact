@@ -15,6 +15,7 @@ import Profile from "./components/pages/Profile";
 import Home from './components/pages/Home';
 import Photos from './components/pages/Photos';
 import PublicHome from './components/pages/PublicHome';
+import HomeDebug from './components/pages/HomeDebug';
 import Calendar from './components/pages/Calendar';
 import DumbHome from './components/pages/DumbHome';
 import DumbPhotos from './components/pages/DumbPhotos';
@@ -29,10 +30,14 @@ import Loading from './components/Loading.js'
 function App() {
   const { loading, user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
-  if (loading) {
+  
+
+  const debugging=true;
+
+  if (!debugging&&loading) {
     return <Loading />;
   }
-
+  
   return (
     <div className="App">
       {/* Don't forget to include the history module */}
@@ -46,8 +51,8 @@ function App() {
 
         {/* <Route exact path="/" component={Home} />
         <Route exact path="/photos" component={Photos} /> */}
-
-        {!isAuthenticated && <Route exact path="/" component={PublicHome} />}
+        {/* Switch the below line to PublicHome for production */}
+        {!isAuthenticated && <Route exact path="/" component={HomeDebug} />}
         {isAuthenticated && <Route exact path="/" component={Home} />}
         {isAuthenticated && <Route exact path="/photos" component={Photos} />}
         {isAuthenticated && <Route exact path="/calendar" component={Calendar} />}

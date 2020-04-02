@@ -81,10 +81,18 @@ function Carousel() {
 
   const { isAuthenticated } = useAuth0();
 
+  //this JSX below should be wrapped with :
+  // {isAuthenticated && (
+  //   <>
+  //   content
+  //   </>
+  //   )};
+  //for production
+
   return (
     <>
   
-      {isAuthenticated && (
+      
         <div className={classes.root}>
         
           <Paper square elevation={0} className={classes.header}>
@@ -143,7 +151,7 @@ function Carousel() {
             }
           />
         </div>
-      )};
+      
     </>
   );
 }
