@@ -16,8 +16,8 @@ export default function AboveHeader() {
     },
     title: {
       
-      fontFamily: 'Anton, sans-serif',
-      textShadow: '4px 4px 4px #aaa',
+      //fontFamily: 'Anton, sans-serif',
+      //textShadow: '4px 4px 4px #aaa',
       marginLeft:'40px',
     },
   }));

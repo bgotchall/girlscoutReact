@@ -9,6 +9,7 @@ import Carousel from "./Carousel";
 import News from './../News';
 import CalendarEmbed from './../CalendarEmbed';
 import EventsEmbed from './../EventsEmbed';
+import Banner from './../Banner';
 
 
 const Home = () => {
@@ -30,14 +31,6 @@ const Home = () => {
     },
     contentContainer: {
       margin: "30px"
-    },
-    banner: {
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "stretch",
-      //color: "black",
-      height: "302px",
-      //backgroundColor: " rgba(0, 174, 88,50)",
     }
   }));
 
@@ -50,20 +43,15 @@ const Home = () => {
       <div className={classes.root}>
         <Grid container spacing={3}>
           <Grid container className={classes.contentContainer} item xs={12}>
-            <Grid item xs={4}>
+            <Grid item xs={5}>
               <Paper className={classes.paper}>
                 <Carousel />
               </Paper>
             </Grid>
 
-            <Grid item xs={8}>
+            <Grid item xs={7}>
               <Paper className={classes.paper}>
-                <div className={classes.banner}>
-                  <h1> Introductory Title!</h1>
-                  <br />
-                  <h3> Some other information.</h3>
-                  <br />
-                </div>
+                <Banner />
               </Paper>
             </Grid>
 
