@@ -10,14 +10,18 @@
     "@testing-library/react": "^9.4.1",
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.4.1",
+    "googleapis": "^48.0.0",
     "moment": "^2.24.0",
+    "mysql2": "^2.1.0",
     "react": "^16.13.0",
     "react-big-calendar": "^0.24.1",
     "react-bootstrap": "^1.0.0-beta.17",
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
-    "react-swipeable-views": "^0.13.9"
+    "react-swipeable-views": "^0.13.9",
+    "sequelize": "^5.21.5",
+    "superagent": "^5.2.2"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -23,3 +23,19 @@ Auth0 notes:  The wait for loading thing works.  The spinner may need to spin fo
 
 Calendar notes:
 maybe: http://jquense.github.io/react-big-calendar/examples/index.html
+
+kind of a rabbit hole getting the calendar integration.  I do have the example from the old project but it also didnt seem to work well.  I will put this off for now.  lots of google resources and the NPM helper library:
+https://www.npmjs.com/package/googleapis#using-api-keys
+
+
+
+general thoughts and to-dos:
+* email malia and or kim with feedback, requests etc.  How do cookie booths work?  ask for spreadsheets.  part done.  have lots of spreadsheets in email.  also a member roster, conveniently.
+
+* MERN ify soon.  get past all the wierd integration problems
+* do a basic table.  members.  recall how to do SQL and Sequilize.  get a basic table populated and start working with it.  Make a basic editor.
+* then do a basic news thing, like what Jasmine did.
+* then the chat can be a reskinned version of the same.
+* then the header intro can be the same.
+* do a calendar zoom page.
+* do a news zoom page.
